@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .heading {
+    font-family: "Montserrat sans-serif";
+  }
+
+  .content {
+    font-family: "Lato sans-serif";
+  }
+
+  .icons:hover {
+    transform: scale(1.9,1.9);
+  }
+
+  .facebook:hover {
+    color:#4267B2;
+  }
+
+  
+  .instagram:hover {
+    color:#fb3958;
+  }
+
+  .linkedin:hover {
+    color:#2867B2;
+  }
+
+  .twitter:hover {
+    color:#1DA1F2;
+  }
+
+  .youtube:hover {
+    color:#FF0000;
+  }
+}
