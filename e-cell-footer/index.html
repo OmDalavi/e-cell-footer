@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/tailwind.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+        <script>
+            var cont = 0;
+            function loopSlider() {
+                var xx = setInterval(function () {
+                    switch (cont) {
+                        case 0: {
+                            $("#slider-1").fadeOut(250);
+                            $("#slider-2").delay(250).fadeIn(250);
+                            $("#sButton1").removeClass("bg-blue-800");
+                            $("#sButton2").addClass("bg-blue-800");
+
+                            cont = 1;
+                            break;
+                        }
+                        case 1: {
+                            $("#slider-2").fadeOut(250);
+                            $("#slider-1").delay(250).fadeIn(250);
+                            $("#sButton2").removeClass("bg-blue-800");
+                            $("#sButton1").addClass("bg-blue-800");
+
+                            cont = 0;
+                            break;
+                        }
+                    }
+                }, 4400);
+            }
+
+            function reinitLoop(time) {
+                clearInterval(xx);
+                setTimeout(loopSlider(), time);
+            }
+
+            function sliderButton1() {
+                $("#slider-2").fadeOut(250);
+                $("#slider-1").delay(250).fadeIn(250);
+                $("#sButton2").removeClass("bg-blue-800");
+                $("#sButton1").addClass("bg-blue-800");
+
+                reinitLoop(2000);
+                cont = 0
+            }
+
+            function sliderButton2() {
+                $("#slider-1").fadeOut(250);
+                $("#slider-2").delay(250).fadeIn(250);
+                $("#sButton1").removeClass("bg-blue-800");
+                $("#sButton2").addClass("bg-blue-800");
+
+                reinitLoop(2000);
+                cont = 1
+            }
+
+            $(window).ready(function () {
+                $("#slider-2").hide();
+                $("#sButton1").addClass("bg-blue-800");
+
+                loopSlider();
+            });
+        </script>
+    </head>
+
+    <body class="">
+        <div class="bg-[#222324] flex flex-col !h-full flex-grow lg:mt-[200px]  ">
+            <div class="flex flex-col lg:flex-row xl:pl-[150px]">
+                <div class="flex items-center ml-8 mt-2 lg:flex-col lg:mt-10 lg:ml-5 lg:items-start lg:pr-10 xl:mr-0">
+                    <span class="heading text-white text-4xl font-bold lg:hidden">Quick Links</span>
+                    <div class="text-white pl-10 mt-4 flex flex-col items-start justify-center lg:hidden  flex-grow">
+                        <div class="md:flex md:flex-row lg:hidden">
+                            <div class="flex flex-col">
+                                <span class="text-3xl content text-semibold py-2">Consortium' 19</span>
+                                <span
+                                    class="hidden md:inline-flex lg:hidden text-lg pl-8 pt-1 pb-3 w-60 font-thin content">Consortium,
+                                    the Annual Entrepreneurship Summit of VNIT Nagpur</span>
+                            </div>
+                            <div class="flex flex-col md:pl-32 md:pr-10">
+                                <span class="text-3xl content text-semibold py-2">Startup Conclave</span>
+                                <span
+                                    class="hidden md:inline-flex lg:hidden text-lg pl-8 pt-1 pb-3 w-60 font-thin content">StartUp
+                                    Conclave, a national-level business plan competition and a part of
+                                    Consortium'19</span>
+                            </div>
+                        </div>
+                        <div class="md:flex md:flex-row lg:hidden">
+                            <div class="flex flex-col">
+                                <span class="text-3xl content text-semibold py-2">Buy Merchandise</span>
+                                <span
+                                    class="hidden md:inline-flex lg:hidden text-lg pl-8 pt-1 pb-3 w-60 font-thin content">Buy
+                                    official merchandise of Consortium'19 at Ecell VNIT online store.</span>
+                            </div>
+                            <div class="flex flex-col md:pl-32 md:pr-10">
+                                <span class="text-3xl content text-semibold py-2">Startup Expo</span>
+                                <span
+                                    class="hidden md:inline-flex lg:hidden text-lg pl-8 pt-1 pb-3 w-60 font-thin content">A
+                                    grand platform for startups to display their product and/ or service to all the
+                                    people.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden lg:inline container sliderAx xl:w-[700px]">
+                        <div id="slider-1" class="container mx-auto">
+                            <div class="relative h-auto">
+                                <a href="https://www.google.com"
+                                    class="absolute inset-0 z-10 bg-white text-center flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-opacity-90 duration-300">
+                                    <span class="text-3xl heading">Event's name</span>
+                                    <p class="mx-auto text-lg content">A grand platform for startups to display their
+                                        product and/or service to all the people.</p>
+                                </a>
+                                <a class="relative">
+                                    <div class="h-auto flex flex-wrap content-center">
+                                        <img src="/images/05.jpg" class="mx-auto">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="slider-2" class="container mx-auto">
+                            <div class="relative h-auto">
+                                <a href="https://www.google.com"
+                                    class="absolute inset-0 z-10 bg-white text-center flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-opacity-90 duration-300">
+                                    <span class="text-3xl heading">Event's name</span>
+                                    <p class="mx-auto text-lg content">A grand platform for startups to display their
+                                        product and/or service to all the people.</p>
+                                </a>
+                                <a class="relative">
+                                    <div class="h-auto flex flex-wrap content-center">
+                                        <img src="/images/02.jpg" class="mx-auto">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden lg:inline-flex justify-between w-12 mx-auto pb-2 pt-4">
+                        <button id="sButton1" onclick="sliderButton1()"
+                            class="bg-blue-400 rounded-full w-4 pb-2 "></button>
+                        <button id="sButton2" onclick="sliderButton2() "
+                            class="bg-blue-400 rounded-full w-4 p-2"></button>
+                    </div>
+                </div>
+                <div class="flex flex-col lg:ml-0 lg:pr-7 xl:pr-10 lg:flex-grow xl:flex-row xl:mb-10 ">
+                    <div class="xl:flex xl:flex-col xl:pr-10 xl:ml-10">
+                        <div class="flex items-center ml-8 mt-10 lg:flex-col lg:ml-0 lg:mt-10 lg:items-start">
+                            <span class="heading text-white text-4xl font-bold lg:pl-56 xl:pl-10">Contact Us</span>
+                            <div
+                                class="text-white ml-20 flex flex-col md:flex-row xl:flex-col md:ml-20 lg:pl-10 lg:ml-0 lg:pt-6 items-start justify-center">
+                                <div class="flex flex-col items-center md:flex-grow lg:items-start">
+                                    <span class="text-2xl content text-semibold">For Queries and Details</span>
+                                    <span class="text-2xl pb-3 font-thin content">contact@ecellvnit.org</span>
+                                </div>
+                                <div
+                                    class="flex flex-col md:pl-12 md:items-center md:flex-grow lg:pl-10 xl:pl-0 lg:items-start">
+                                    <span class="text-2xl content text-semibold">For Association and Sponsorship</span>
+                                    <span class="text-2xl font-thin content">associate@ecellvnit.org</span>
+                                </div>
+                            </div>
+                            <div
+                                class="hidden lg:inline-flex items-center lg:flex-row xl:flex-col lg:mt-5 lg:pl-10 text-white">
+                                <span class="heading text-white text-4xl font-bold">Buy Merchandise</span>
+                                <span class="text-2xl pl-10 content text-semibold content xl:pl-0">For Queries and
+                                    Details</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center ml-8 mt-12 xl:items-start flex-grow lg:ml-10 xl:flex-col xl:mt-8">
+                            <span class="heading text-white text-4xl font-bold">Follow Us</span>
+                            <div class="text-white ml-20 lg:pl-8 lg:ml-0 xl:ml-0 xl:pl-0">
+                                <div class="flex items-center justify-center md:pt-3 flex-grow">
+                                    <i class="fab fa fa-facebook-official fa-2x text-white px-3 hover:outline-none icons facebook"></i>
+                                    <i class="fab fa fa-instagram fa-2x text-white px-3 md:px-3 hover:outline-none icons instagram"></i>
+                                    <i class="fab fa fa-twitter fa-2x text-white px-3 hover:outline-none icons twitter"></i>
+                                    <i class="fab fa fa-linkedin fa-2x text-white px-3 hover:outline-none icons linkedin"></i>
+                                    <i class="fab fa fa-youtube-play fa-2x text-white px-3 hover:outline-none icons youtube"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-center pl-8 mt-12 lg:pl-10 xl:mt-0 md:justify-start xl:justify-center xl:pt-10 xl:flex-col">
+                        <span class="heading text-white text-4xl font-bold">Our Hosting Partner</span>
+                        <div
+                            class="text-white pr-10 pl-10 md:pr-3 md:pl-24 flex flex-col items-start justify-start xl:justify-start xl:pr-16 flex-grow">
+                            <img src="/images/znetlive.png" width="175" class="rounded-full pl-2 md:pt-4 lg:ml-0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center pt-8 w-full xl:pt-10">
+                <img src="images/E-Cell_white.jpg" width="300" class="xl:h-48 xl:w-96">
+            </div>
+        </div>
+    </body>
+
+</html>

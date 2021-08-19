@@ -52,42 +52,6 @@ body{
 	margin-top: 6%;
 }
 
-@media(max-width: 1200px){
-	.events{
-		display: none;
-	}
-	.drop-dn{
-		display:table;
-	}
-	.hosting-part{
-		height: 300px;
-	}
-	.contact-us{
-		height: 300px;
-	}
-	.brand{
-		display: inline-block;
-		margin-top: 40%;
-		position: relative;
-		right: 10%;
-		top: 30%;
-	}
-	.hos-part-img{
-		width: 40%;
-	}
-	.headings{
-		margin-top: 2%;
-	}
-	div{
-		padding-left: 0;
-		padding-right: 0;
-		margin-left: 0;
-		margin-right: 0;
-	}
-
-	
-}
-
 .show{
 
 	display: inline-block;
@@ -130,4 +94,40 @@ body{
 	transform: scale(1.9,1.9);
 	color: cyan;
 
+}
+
+@media(max-width: 1200px){
+	.events{
+		display: none;
+	}
+	.drop-dn{
+		display:table;
+	}
+	.hosting-part{
+		height: 300px;
+	}
+	.contact-us{
+		height: 300px;
+	}
+	.brand{
+		display: inline-block;
+		margin-top: 40%;
+		position: relative;
+		right: 10%;
+		top: 30%;
+	}
+	.hos-part-img{
+		width: 40%;
+	}
+	.headings{
+		margin-top: 2%;
+	}
+	div{
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	
 }
