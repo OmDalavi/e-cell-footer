@@ -82,9 +82,26 @@ body{
 .social-icon:hover{
 	/*font-size: 57px;*/
 	transform: scale(1.9,1.9);
-	color: cyan;
 
 }
+.fb:hover{
+	
+	color: #00aaff;
+	
+}
+.tw:hover{
+	color:#00aaff;
+}
+.insta:hover{
+	color: #E1306C;
+}
+.linked:hover{
+	color: #0e76a8;
+}
+.yt:hover{
+	color: #FF0000;
+}
+
 @media(max-width: 1200px){
 	.quick-links{
 		display: block;
